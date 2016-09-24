@@ -57,7 +57,7 @@ var UtilService = (function () {
     };
     // 获取session
     UtilService.prototype.getSeesion = function (str) {
-        return localStorage.getItem(str);
+        return JSON.parse(localStorage.getItem(str));
     };
     // 清除session
     UtilService.prototype.clearSession = function () {

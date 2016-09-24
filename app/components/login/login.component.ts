@@ -49,7 +49,4 @@ export class LoginComponent {
                 }
             });
     }
-
-    // 跳转到注册页面
-    register () { this.util.redirect('/register'); }
 }

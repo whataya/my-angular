@@ -65,7 +65,6 @@ var RegisterComponent = (function () {
             }
         });
     };
-    RegisterComponent.prototype.login = function () { this.util.redirect('/login'); };
     RegisterComponent = __decorate([
         core_1.Component({
             selector: 'my-register',

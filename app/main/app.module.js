@@ -19,6 +19,10 @@ var app_component_1 = require('./../components/app.component');
 var home_component_1 = require('./../components/home/home.component');
 var login_component_1 = require('./../components/login/login.component');
 var register_component_1 = require('./../components/login/register.component');
+var dashboard_component_1 = require('./../components/home/dashboard.component');
+var profile_component_1 = require('./../components/user/profile.component');
+var pay_component_1 = require('./../components/pay/pay.component');
+// 服务
 var common_service_1 = require('./../services/common.service');
 var util_service_1 = require('./../services/util.service');
 var AppModule = (function () {
@@ -36,7 +40,10 @@ var AppModule = (function () {
                 app_component_1.AppComponent,
                 home_component_1.HomeComponent,
                 login_component_1.LoginComponent,
-                register_component_1.RegisterComponent
+                register_component_1.RegisterComponent,
+                dashboard_component_1.DashboardComponent,
+                profile_component_1.ProfileComponent,
+                pay_component_1.PayComponent
             ],
             providers: [
                 common_service_1.CommonService,

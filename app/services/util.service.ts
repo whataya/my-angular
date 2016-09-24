@@ -50,7 +50,7 @@ export class UtilService {
 
     // 获取session
     getSeesion (str: string) {
-        return localStorage.getItem(str);
+        return JSON.parse(localStorage.getItem(str));
     }
 
     // 清除session

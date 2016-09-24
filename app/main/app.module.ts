@@ -11,6 +11,11 @@ import { AppComponent } from './../components/app.component';
 import { HomeComponent } from './../components/home/home.component';
 import { LoginComponent } from './../components/login/login.component';
 import { RegisterComponent } from './../components/login/register.component';
+import { DashboardComponent } from './../components/home/dashboard.component';
+import { ProfileComponent } from './../components/user/profile.component';
+import { PayComponent } from './../components/pay/pay.component';
+
+// 服务
 import { CommonService } from './../services/common.service';
 import { UtilService } from './../services/util.service';
 
@@ -26,7 +31,10 @@ import { UtilService } from './../services/util.service';
         AppComponent,
         HomeComponent,
         LoginComponent,
-        RegisterComponent
+        RegisterComponent,
+        DashboardComponent,
+        ProfileComponent,
+        PayComponent
     ],
     providers: [
         CommonService,

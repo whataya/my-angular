@@ -34,11 +34,14 @@ var HomeComponent = (function () {
         if (!this.util.getSeesion('user')) {
             this.util.redirect('/login');
         }
+        else {
+            this.user = this.util.getSeesion('user');
+        }
     };
     // 退出登陆
     HomeComponent.prototype.logout = function () {
         var _this = this;
-        var id = JSON.parse(this.util.getSeesion('user'))._id;
+        var id = this.util.getSeesion('user')._id;
         this.commonService.POST(this.serviceUrl.userServiceUrl, this.util.formatPost('user.logout', { id: id }))
             .then(function (res) {
             _this.util.clearSession();

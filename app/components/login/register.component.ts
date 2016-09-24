@@ -60,6 +60,4 @@ export class RegisterComponent implements OnInit {
                 }
             });
     }
-
-    login () { this.util.redirect('/login'); }
 }

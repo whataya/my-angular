@@ -16,7 +16,8 @@ export class HomeComponent implements OnInit {
     serviceUrl: any = {
         userServiceUrl: ''
     };
-
+    
+    user: UserEntity;
     constructor(
         private commonService: CommonService,
         private util: UtilService
@@ -35,13 +36,15 @@ export class HomeComponent implements OnInit {
         // 判断用户是否已登陆
         if (!this.util.getSeesion('user')) {
             this.util.redirect('/login');
+        } else {
+            this.user = this.util.getSeesion('user');
         }
         
     }
 
     // 退出登陆
     logout () {
-        let id = JSON.parse(this.util.getSeesion('user'))._id;
+        let id = this.util.getSeesion('user')._id;
         this.commonService.POST(this.serviceUrl.userServiceUrl, this.util.formatPost('user.logout', {id: id}))
             .then(res => {
                 this.util.clearSession();
@@ -49,4 +52,5 @@ export class HomeComponent implements OnInit {
             });
         
     }
+
 }

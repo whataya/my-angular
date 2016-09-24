@@ -46,8 +46,6 @@ var LoginComponent = (function () {
             }
         });
     };
-    // 跳转到注册页面
-    LoginComponent.prototype.register = function () { this.util.redirect('/register'); };
     LoginComponent = __decorate([
         core_1.Component({
             selector: 'my-login',
